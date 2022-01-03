@@ -8,8 +8,6 @@ Description: Books recommendation, content basesd, similarity matrix.
 Recommend only according to the similarity of different books.
 Get the similarity matrix of one book and all other rows, then \
     recommend according to the similarity.
-
-https://www.youtube.com/watch?v=3ecNC-So0r4&t=588s
 """
 
 from numpy.core.numeric import NaN
@@ -148,4 +146,3 @@ def do_dataset2():
 def rec_content_based():
     do_dataset1()
     #do_dataset2()
-    
