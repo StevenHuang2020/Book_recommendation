@@ -2,7 +2,7 @@
 
 The key to the recommendation system is the similarity calculation. \
 The [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html), and other pairwise metrics algorithms can refer to [here](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics.pairwise). \
-The similarity matrix is a symmetric matrix, one line of similarity matrix means \
+The similarity matrix is a square symmetric matrix, one line of similarity matrix means \
 its similarity or difference with all other lines. One example looks like below:
 
 ```
