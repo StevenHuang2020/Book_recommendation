@@ -1,6 +1,22 @@
 ## Book recommendation algorithm
 
-1.The output of content-based recommendation
+The key to the recommendation system is the similarity calculation. <br/>
+The [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html), and other pairwise metrics algorithms can refer to [here](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.metrics.pairwise).
+
+The similarity matrix is a symmetric matrix, one line of similarity matrix means it's similarities with all other lines. </br>
+One example looks like below:
+```
+cosine similarity=
+ [[1.         0.13801311 0.         ... 0.23904572 0.25197632 0.21821789]
+ [0.13801311 1.         0.         ... 0.11547005 0.12171612 0.10540926]
+ [0.         0.         1.         ... 0.         0.         0.        ]
+ ...
+ [0.23904572 0.11547005 0.         ... 1.         0.21081851 0.18257419]
+ [0.25197632 0.12171612 0.         ... 0.21081851 1.         0.19245009]
+ [0.21821789 0.10540926 0.         ... 0.18257419 0.19245009 1.        ]]
+ ```
+ 
+#### 1. The output of content-based recommendation
 ```
 The 10 most recommended books to The Hunger Games (The Hunger Games, #1) are:
 1 24 Harry Potter and the Goblet of Fire (Harry Potter, #4) 2000.0 J.K. Rowling, Mary GrandPré 4.53
@@ -15,7 +31,7 @@ The 10 most recommended books to The Hunger Games (The Hunger Games, #1) are:
 10 3752 Poirot Investiga (Hércules Poirot, #3) 1924.0 Agatha Christie 4.07
 ```
 
-2.The output of collaborative filtering
+#### 2. The output of collaborative filtering
 ```
 The most recommended books for user(userId:2033, loc:omaha, nebraska, usa, age:27)are:
 1 similar-favorite user, userId: 179978 perry, new york, usa 28
